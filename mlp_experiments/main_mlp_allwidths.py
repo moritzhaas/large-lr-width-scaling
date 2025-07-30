@@ -72,7 +72,6 @@ def main(args):
     else:
         raise ValueError('Unknown width choice. Use standard, fine, few or wide.')
     
-    LR = args.lr if args.lr_log == 9999 else 2.0**(-args.lr_log)
     RHO = args.rho
     PARAMETERIZATION = args.param #'mup' | 'sp' | 'ntp'
     PERTURBATION = args.perturb # 'mpp' | 'global' | 'gb' | 'naive'
@@ -83,6 +82,7 @@ def main(args):
     for WIDTH in WIDTHS:
         args.width = WIDTH
         utils.seed_everything(seed)
+        LR = args.lr if args.lr_log == 9999 else 2.0**(-args.lr_log)
         if args.lrexp != 0:
             LR=np.round(LR * (WIDTH/256)**args.lrexp,8)
         
