@@ -5,7 +5,7 @@
 </p>
 
 
-This repository provides code to reproduce all experiments in the preprint [&#39;On the Surprising Effectiveness of Large Learning Rates under Standard Width Scaling&#39;](https://arxiv.org/pdf/2505.22491).
+This repository provides code to reproduce all experiments in the NeurIPS 2025 spotlight paper [&#39;On the Surprising Effectiveness of Large Learning Rates under Standard Width Scaling&#39;](https://arxiv.org/pdf/2505.22491).
 
 ## Refined coordinate check
 
@@ -155,4 +155,5 @@ If you use this software, or any ideas from our code or paper, please cite the f
   year={2025}
 }
 ```
+
 
