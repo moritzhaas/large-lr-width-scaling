@@ -1,5 +1,10 @@
 # On the Surprising Effectiveness of Large Learning Rates under Standard Width Scaling
 
+<p align="center">
+  <img src="effectiveupdates_splargelr_cifar10_SGD.png" width="1000" alt="Effective updates in SP with large learning rates: Logits diverge, hidden layers recover stable feature learning, input layers and layernorm gains learn vanishingly."/>
+</p>
+
+
 This repository provides code to reproduce all experiments in the preprint [&#39;On the Surprising Effectiveness of Large Learning Rates under Standard Width Scaling&#39;](https://arxiv.org/pdf/2505.22491).
 
 ## Refined coordinate check
@@ -8,7 +13,7 @@ As a useful diagnostic tool, we implement fine-grained tracking of neural networ
 
 Empirically, we observe robust scaling laws predictable by Tensor Program arguments of effective updates $\Delta W_t x_t$ and propagating updates $W_0\Delta x_t$ of each trainable weight matrix as a function of width that allow extrapolating trends and predicting phase transitions in the dynamics at large model scale.
 
-For Transformers, [our training and tracking code](https://github.com/sbordt/litgpt/) is easy to adapt and reuse.
+For Transformers, [our training and tracking code](https://github.com/tml-tuebingen/torch-module-monitor) is easy to adapt and reuse.
 
 For MLPs, see the corresponding section below.
 
@@ -16,7 +21,7 @@ For MLPs, see the corresponding section below.
 
 The transformer experiments were performed using a modified version of LitGPT, which implements training with SP and muP, and monitors modules during training. 
 
-You can find the fork [here](https://github.com/sbordt/litgpt/). The entry point for our experiments is the script ```pretrain-experiments/pretrain-experiment.py```.
+You can find the fork [here](https://github.com/sbordt/litgpt/), and an easy-to-use repo for fine-grained layerwise signal-prop monitoring [here](https://github.com/tml-tuebingen/torch-module-monitor). The entry point for our experiments is the script ```pretrain-experiments/pretrain-experiment.py```.
 
 The shell scripts with the parameters for the different experiments are in this repository under ```transformer-scripts```.
 
@@ -150,3 +155,4 @@ If you use this software, or any ideas from our code or paper, please cite the f
   year={2025}
 }
 ```
+
