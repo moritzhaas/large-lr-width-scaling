@@ -151,9 +151,10 @@ If you use this software, or any ideas from our code or paper, please cite the f
 @article{haas2025splargelr,
   title={On the Surprising Effectiveness of Large Learning Rates under Standard Width Scaling},
   author={Haas, Moritz and Bordt, Sebastian and von Luxburg, Ulrike and Vankadara, Leena Chennuru},
-  journal={arXiv:2505.22491},
+  journal={Advances in Neural Information Processing Systems 38},
   year={2025}
 }
 ```
+
 
 
